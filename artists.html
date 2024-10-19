@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPNS - Artists</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+  
+<body>
+
+    <div class="pre-header">
+        <img src="banner.png" alt="logo1" class="preheaderlogo"> <!-- Note, the font I used was roboto black. -->
+    </div>
+    
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="artists.html">Our Artists</a></li>
+                <li><a href="donate.html">Merchandise</a></li>
+                <li><a href="contact.html">Demos</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="news.html">Blog/News</a></li>
+                <li><a href="mailinglist.html">Mailing List</a></li>
+                <li><a href="archives.html">Archives</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="sidebar collapsed" id="sidebar">
+        <button id="toggle-sidebar" aria-label="Toggle Sidebar">
+            <img src="menu-icon.png" alt="Menu Icon" class="menu-icon"> <!-- Your existing button -->
+        </button>
+
+        <button id="open-sidebar" style="display: none;" aria-label="Open Sidebar"> <!-- New button -->
+            <img src="menu-icon.png" alt="Menu Icon" class="menu-icon">
+        </button>
+
+        <img src="iconsmall.png" alt="Icon2" class="sidebar-logo">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="artists.html">Our Artists</a></li>
+            <li><a href="donate.html">Merchandise</a></li>
+            <li><a href="contact.html">Demos</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="news.html">Blog/News</a></li>
+            <li><a href="mailinglist.html">Mailing list</a></li>
+            <li><a href="archives.html">Archives</a></li>
+        </ul>
+        <img src="ovalglobeicon.png" alt="Icon2" class="sidebar-logo">
+    </aside>
+
+
+    <div class="content">
+        <h1>Our Artists</h1>
+    </div>
+
+    <div class="sort-container">
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by">
+            <option value="name-asc">Name: A-Z</option>
+            <option value="name-desc">Name: Z-A</option>
+        </select>
+    </div>
+
+    <div class="releases-grid" id="releases-grid">
+
+        <div class="release">
+            <a href="artists/deathnight.html">
+                <img src="artists/artistimages/deathnight/sample.png" alt="DeathNight" class="album-art">
+                <p class="artist-name">DeathNight</p>
+                <p class="release-artist">Port Moody, BC</p>
+            </a>
+        </div>
+
+        <div class="release">
+            <a href="artists/GHSH210.html">
+                <img src="artists/artistimages/ghsh210/sample.jpg" alt="GHSH210" class="album-art">
+                <p class="artist-name">GHSH210</p>
+                <p class="release-artist">Vancouver, BC</p>
+            </a>
+        </div>
+
+        <!-- Add more releases in the same format -->
+    </div>
+
+
+
+    <footer>
+        <a href="contact.html">Contact Us</a>
+        <p>IPNS is based in Port Moody, Canada.
+        <br>
+        </p>
+        <p>Established October 4, 2024</p>
+        <p id="last-updated"></p>
+        <nav>
+        </nav>
+    </footer>
+    
+    <!-- Link to your JavaScript file -->
+    <script src="jscode.js"></script>
+    <script>
+document.getElementById('sort-by').addEventListener('change', function() {
+    let sortBy = this.value;
+    let releasesGrid = document.getElementById('releases-grid');
+
+    // Get all releases
+    let releases = Array.from(releasesGrid.getElementsByClassName('release'));
+
+    // Sort the releases
+    releases.sort(function(a, b) {
+        let artistA = a.querySelector('.artist-name') ? a.querySelector('.artist-name').textContent.trim().toUpperCase() : '';
+        let artistB = b.querySelector('.artist-name') ? b.querySelector('.artist-name').textContent.trim().toUpperCase() : '';
+
+        if (sortBy === 'name-asc') {
+            return artistA.localeCompare(artistB);
+        } else if (sortBy === 'name-desc') {
+            return artistB.localeCompare(artistA);
+        }
+    });
+
+    // Clear all releases from the grid
+    while (releasesGrid.firstChild) {
+        releasesGrid.removeChild(releasesGrid.firstChild);
+    }
+
+    // Append the sorted releases back to the grid
+    releases.forEach(function(release) {
+        releasesGrid.appendChild(release);
+    });
+});
+            </script>
+</body>
+</html>

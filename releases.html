@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPNS - Releases</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+</head>
+<body>
+
+    <div class="pre-header">
+        <img src="banner.png" alt="logo1" class="preheaderlogo">
+    </div>
+    
+    <header>
+        <nav>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="artists.html">Our Artists</a></li>
+                <li><a href="donate.html">Merchandise</a></li>
+                <li><a href="contact.html">Demos</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="news.html">Blog/News</a></li>
+                <li><a href="mailinglist.html">Mailing List</a></li>
+                <li><a href="archives.html">Archives</a></li>
+            </ul>
+        </nav>
+    </header>
+    <aside class="sidebar collapsed" id="sidebar">
+        <button id="toggle-sidebar" aria-label="Toggle Sidebar">
+            <img src="menu-icon.png" alt="Menu Icon" class="menu-icon"> <!-- Your existing button -->
+        </button>
+
+        <button id="open-sidebar" style="display: none;" aria-label="Open Sidebar"> <!-- New button -->
+            <img src="menu-icon.png" alt="Menu Icon" class="menu-icon">
+        </button>
+
+        <img src="iconsmall.png" alt="Icon2" class="sidebar-logo">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="releases.html">Releases</a></li>
+            <li><a href="artists.html">Our Artists</a></li>
+            <li><a href="donate.html">Merchandise</a></li>
+            <li><a href="contact.html">Demos</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="news.html">Blog/News</a></li>
+            <li><a href="mailinglist.html">Mailing list</a></li>
+            <li><a href="archives.html">Archives</a></li>
+        </ul>
+        <img src="ovalglobeicon.png" alt="Icon2" class="sidebar-logo">
+    </aside>
+
+    <div class="content">
+        <h1>Label Discography</h1>
+        <p>All of our releases are available on our <a href="https://bandcamp.com">Bandcamp.</a></p>
+        <p>We're also on <a href="https://discogs.com">Discogs.</a></p>
+    </div>
+
+    <div class="sort-container">
+        <label for="sort-by">Sort by:</label>
+        <select id="sort-by">
+            <option value="date-desc">Date: Descending</option>
+            <option value="date-asc">Date: Ascending</option>
+            <option value="title-asc">Title: A-Z</option>
+            <option value="title-desc">Title: Z-A</option>
+            <option value="artist-asc">Artist: A-Z</option>
+            <option value="artist-desc">Artist: Z-A</option>
+            <option value="cat-desc">Cat #: Descending</option>
+            <option value="cat-asc">Cat #: Ascending</option>
+        </select>
+    </div>
+
+    <div class="releases-grid" id="releases-grid">
+        <div class="promo-release">
+            <a href="contact.html">
+                <img src="releaseart/000promoart.png" alt="promo_poster" class="album-art">
+                <p class="promo-title">WE WANT YOUR MUSIC!</p>
+                <p class="promo-artist">YOUR NAME HERE</p>
+                <p class="promo-cat"><a href="contact.html" class="promo-link">Submit here...</a></p>
+                <p class="release-date"></p>
+            </a>
+        </div>
+
+        <div class="release">
+            <a href="releases/SHAME.html">
+                <img src="releaseart/SHAME.png" alt="SHAME" class="album-art">
+                <p class="release-title">SHAdeeezddwdME</p>
+                <p class="release-artist">lol</p>
+                <p class="cat-num">IPNS0003</p>
+                <p class="release-date">2024-10-10</p> <!-- Add release date here -->
+            </a>
+        </div>
+
+        <div class="release">
+            <a href="releases/SHAME.html">
+                <img src="releaseart/SHAME.png" alt="SHAME" class="album-art">
+                <p class="release-title">e111</p>
+                <p class="release-artist">2lol</p>
+                <p class="cat-num">IPNS0002</p>
+                <p class="release-date">2024-05-01</p>
+            </a>
+        </div>
+
+        <div class="release">
+            <a href="releases/SHAME.html">
+                <img src="releaseart/SHAME.png" alt="SHAME" class="album-art">
+                <p class="release-title">SHAME</p>
+                <p class="release-artist">DeathNight & GHSH210</p>
+                <p class="cat-num">IPNS0001</p>
+                <p class="release-date">1998-01-03</p>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <a href="contact.html">Contact Us</a>
+        <p>IPNS is based in Port Moody, Canada.</p>
+        <p>Established October 4, 2024</p>
+        <p id="last-updated"></p>
+        <nav></nav>
+    </footer>
+
+    <!-- Link to your JavaScript file -->
+    <script src="jscode.js"></script>
+
+    <script>
+document.getElementById('sort-by').addEventListener('change', function() {
+    let sortBy = this.value;
+    let releasesGrid = document.getElementById('releases-grid');
+    
+    // Get all releases except those with the 'promo-release' class
+    let releases = Array.from(releasesGrid.getElementsByClassName('release')).filter(function(release) {
+        return !release.classList.contains('promo-release');
+    });
+
+    // Sort the filtered releases
+    releases.sort(function(a, b) {
+        let titleA = a.querySelector('.release-title') ? a.querySelector('.release-title').textContent.trim().toUpperCase() : '';
+        let titleB = b.querySelector('.release-title') ? b.querySelector('.release-title').textContent.trim().toUpperCase() : '';
+        let artistA = a.querySelector('.release-artist') ? a.querySelector('.release-artist').textContent.trim().toUpperCase() : '';
+        let artistB = b.querySelector('.release-artist') ? b.querySelector('.release-artist').textContent.trim().toUpperCase() : '';
+        let catA = a.querySelector('.cat-num') ? a.querySelector('.cat-num').textContent.trim().toUpperCase() : '';
+        let catB = b.querySelector('.cat-num') ? b.querySelector('.cat-num').textContent.trim().toUpperCase() : '';
+        let dateA = a.querySelector('.release-date') ? new Date(a.querySelector('.release-date').textContent.trim()) : new Date(0);
+        let dateB = b.querySelector('.release-date') ? new Date(b.querySelector('.release-date').textContent.trim()) : new Date(0);
+
+        if (sortBy === 'cat-asc') {
+            return catA.localeCompare(catB);
+        } else if (sortBy === 'cat-desc') {
+            return catB.localeCompare(catA);
+        } else if (sortBy === 'title-asc') {
+            return titleA.localeCompare(titleB);
+        } else if (sortBy === 'title-desc') {
+            return titleB.localeCompare(titleA);
+        } else if (sortBy === 'artist-asc') {
+            return artistA.localeCompare(artistB);
+        } else if (sortBy === 'artist-desc') {
+            return artistB.localeCompare(artistA);
+        } else if (sortBy === 'date-asc') {
+            return dateA - dateB; // Ascending date sort
+        } else if (sortBy === 'date-desc') {
+            return dateB - dateA; // Descending date sort
+        }
+    });
+
+    // First, clear all the non-promo releases from the grid
+    let allReleases = Array.from(releasesGrid.getElementsByClassName('release'));
+    allReleases.forEach(function(release) {
+        if (!release.classList.contains('promo-release')) {
+            release.remove();
+        }
+    });
+
+    // Append the sorted releases back to the grid
+    releases.forEach(function(release) {
+        releasesGrid.appendChild(release);
+    });
+});
+    </script>
+
+</body>
+</html>

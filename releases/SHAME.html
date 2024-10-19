@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INPS0001</title>
+    <link rel="stylesheet" href="..\styles.css">
+    <link rel="icon" href="..\icon.png" type="image/x-icon">
+</head>
+
+<body class="no-sidebar">
+
+    <header>
+    </header>
+
+    <div class="release-details">
+        <h1>SHAME - IPNS0001</h1>
+        <a href="../releases.html" class="back-link">← Back to Releases</a>
+        <p></p>
+        
+        <div class="details-container"> <!-- Flex container for carousel and text -->
+            <div class="release-info"> <!-- Text container -->
+                <p><strong>Title:</strong> SHAME</p>
+
+                <p><strong>Artist:</strong> <a href="../artists/deathnight.html">DeathNight</a> & <a href="../artists/GHSH210.html">GHSH210</a></p>
+
+                <p><strong>Catalog Number:</strong> IPNS0001</p>
+
+                <p><strong>Release Date:</strong> Soon!</p>
+
+                <p><strong>Genre:</strong> Experimental Electronica</p>
+
+                <p><strong>Tracklist:</strong></p>
+                <ul class="tracklist">
+                     <li class="track-item">
+                        <span>1. SHAME</span>
+                        <span class="timestamp">(?:??)</span>
+                    </li>
+                    <li class="track-item">
+                        <span>2. SHAME (Alternate Version)</span>
+                        <span class="timestamp">(?:??)</span>
+                    </li>
+                    <li class="track-item">
+                        <span>3. SHAME (Destroyed)</span>
+                        <span class="timestamp">(?:??)</span>
+                    </li>
+                    <!-- More tracks -->
+                </ul>
+
+                <p><strong>Released editions:</strong></p>
+                <ul class="tracklist">
+                     <li class="track-item">
+                        <span>Digital</span>
+                        <span class="timestamp">(IPNS0001)</span>
+                    </li>
+                    <li class="track-item">
+                        <span>CD</span>
+                        <span class="timestamp">(IPNS0001CD)</span>
+                    </li>
+                    <!-- More tracks -->
+                </ul>
+
+                <p>I WALK CIRCLES IN SHAME</p>
+
+                <p><strong>Artist's Commentary:</strong> DeathNight - This marks a shift in my production style. I hope you enjoy it!
+                </p>
+
+                <p><a href="https://discogs.com">View on Discogs</a></p>
+
+                <button onclick="window.location.href='https://bandcamp.com'" class="purchase-button">Download or Purchase</button>
+                <button onclick="window.location.href='https://drive.google.com/drive/folders/1IB5C_6yO4EgBzC9h0TVCHI0AEiJii97j?usp=drive_link'" class="download-button">Download Album Art</button>
+            </div>
+    
+            <!-- Carousel Structure -->
+            <div class="carousel">
+                <img src="../bigreleases/SHAME.png" alt="Album 1 Cover" class="album-art-large" id="carouselImage" onclick="openModal()">
+                <div class="arrow-container">
+                    <span class="arrow" onclick="changeImage(-1)">&#10094;</span> <!-- Left Arrow -->
+                    <span id="imageCounter" class="image-counter">1 / 1</span> <!-- Image Counter -->
+                    <span class="arrow" onclick="changeImage(1)">&#10095;</span> <!-- Right Arrow -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for the expanded image -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="caption"></div>
+        <div class="arrow-container">
+            <span class="arrow" onclick="changeImage(-1)">&#10094;</span> <!-- Left Arrow -->
+            <span id="modalImageCounter" class="image-counter">1 / 2</span> <!-- Modal Image Counter -->
+            <span class="arrow" onclick="changeImage(1)">&#10095;</span> <!-- Right Arrow -->
+        </div>
+    </div>
+
+    <div style="clear: both;"></div> <!-- Clears float -->
+
+    <footer>
+        <a href="contact.html">Contact Us</a>
+        <p>IPNS is based in Port Moody, Canada.
+        <br>
+        </p>
+        <p>Established October 4, 2024</p>
+        <p id="last-updated"></p>
+        <nav>
+        </nav>
+    </footer>
+
+    <script src="../jscode.js"></script>
+    <script>
+        let currentImageIndex = 0; // Index to track the current image
+        const images = [
+            { src: "../bigreleases/SHAME.png", alt: "Original cover art" },
+        ];
+    
+        function openModal() {
+            showImage(currentImageIndex); // Show the current image in modal
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "block"; // Show the modal
+            updateImageCounter(); // Update the image counter in modal
+        }
+    
+        function closeModal() {
+            const modal = document.getElementById("imageModal");
+            modal.style.display = "none"; // Hide the modal
+        }
+    
+        function showImage(index) {
+            const modalImage = document.getElementById("modalImage");
+            const caption = document.getElementById("caption");
+    
+            modalImage.src = images[index].src; // Set the modal image source
+            modalImage.alt = images[index].alt; // Set alt text for accessibility
+            caption.innerHTML = images[index].alt; // Set caption to the image alt text
+            updateImageCounter(); // Update the image counter in modal
+        }
+    
+        function changeImage(direction) {
+            currentImageIndex += direction; // Change the index based on direction
+    
+            // Wrap around if the index is out of bounds
+            if (currentImageIndex < 0) {
+                currentImageIndex = images.length - 1; // Go to last image
+            } else if (currentImageIndex >= images.length) {
+                currentImageIndex = 0; // Go to first image
+            }
+    
+            updateCarouselImage(); // Update the main carousel image
+            showImage(currentImageIndex); // Update the modal image
+            updateImageCounter(); // Update the counter in the carousel
+        }
+    
+        function updateCarouselImage() {
+            const carouselImage = document.getElementById("carouselImage");
+            carouselImage.src = images[currentImageIndex].src; // Update the main carousel image
+            carouselImage.alt = images[currentImageIndex].alt; // Update alt text for accessibility
+            updateImageCounter(); // Update the counter in the carousel
+        }
+    
+        function updateImageCounter() {
+            const imageCounter = document.getElementById("imageCounter");
+            const modalImageCounter = document.getElementById("modalImageCounter");
+            const counterText = `${currentImageIndex + 1} / ${images.length}`; // Counter text
+            imageCounter.innerText = counterText; // Update the counter text in the carousel
+            modalImageCounter.innerText = counterText; // Update the counter text in the modal
+        }
+    
+        // Prevent the modal from closing when clicking inside it
+        document.getElementById("imageModal").onclick = function(event) {
+            event.stopPropagation(); // Prevent the click event from bubbling up
+        };
+    </script>
+    
+</body>
+</html>

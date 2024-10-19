@@ -1,0 +1,1382 @@
+
+/* --------------------------------- */
+/* Global Styles                     */
+/* --------------------------------- */
+html, body {
+    overflow-x: hidden; /* This prevents horizontal scrolling */
+    margin: 0; /* Ensures no default margin causing the scroll */
+    padding: 0; /* Removes default padding */
+    width: 100vw; /* Ensures full width of the viewport */
+}
+
+body {
+    font-size: 1.7vh;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif; 
+    background-color: black; /* Set background color to black */
+    color: white; /* Change text color to white for better contrast */
+    line-height: 1.5; /* Adjusts line spacing; 1.5 times the font size */
+    height: 100vh;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 0.2em; /* Adjust the space below headings */
+    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+}
+
+h1 {
+    margin-bottom: 0.2em; /* Adjust the space below headings */
+    text-align: center;
+    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+}
+
+/* Navigation Menu Styles */
+.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Display items in a row */
+    justify-content: center; /* Center the menu items horizontally */
+    background-color: black; /* Background color of the navigation menu */
+}
+
+.nav-menu li {
+    margin: 0 0.521vw; /* Space between menu items */
+}
+
+.nav-menu li a {
+    display: block;
+    padding: 0.729vw 1.042vw; /* Padding inside each link */
+    text-align: center;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+}
+
+.nav-menu li a:hover {
+    background-color: #575757; /* Background color when hovered */
+}
+
+/* --------------------------------- */
+/* Sidebar Styles                    */
+/* --------------------------------- */
+.sidebar {
+    display: none;
+}
+
+.menu-icon {
+    width: 1.876rem; /* Set a size for the icon */
+    height: auto; /* Maintain aspect ratio */
+    display: none;
+}
+
+#open-sidebar {
+    display: none;
+    visibility: hidden;
+}
+
+/* --------------------------------- */
+/* Article Styles                     */
+/* --------------------------------- */
+article{
+    text-align: center;
+}
+
+.articleheading{
+    font-size: 2.25em
+}
+
+.back-link {
+    color: orange; /* Set the link color to orange */
+    font-weight: bold; /* Make it bold for emphasis */
+    text-decoration: none;
+    background-color: black;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: blueviolet;
+    background-color: #575757; /* Optional: change background color on hover */
+    text-decoration: underline;
+}
+
+.info-panel {
+    background-color: #000000; /* Light background for the panel */
+    border: 1px solid #ccc; /* Border for the panel */
+    padding: 20px; /* Padding inside the panel */
+    margin: 20px 0; /* Margin around the panel */
+    color: white
+}
+
+.info-panel h2 {
+    margin-bottom: 0.938rem; /* Space below the heading */
+}
+
+/* --------------------------------- */
+/* Header Styles                     */
+/* --------------------------------- */
+
+.pre-header {
+    color: white; /* Text color */
+    text-align: center; /* Center-align the text */
+    font-size: 1.2em; /* Adjust font size */
+    height: 9vh; 
+}
+
+.preheaderlogo {
+    height: 9vh; 
+}
+
+header {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    height: 27.5vh; /* Define the height of the header */
+    background-image: url('header-image.png'); /* Change to your image file */
+    background-size: cover; /* Scale the image to cover the header area */
+    background-position: center; /* Adjust the position */
+    background-repeat: repeat-x; /* Prevents the image from repeating */
+}
+
+.header a {
+    color: orange; /* Change this to your desired color */
+
+
+}
+
+/* --------------------------------- */
+/* Content Styles                    */
+/* --------------------------------- */
+.content {
+    margin-left: 15vw; 
+    margin-right: 15vw;
+    padding: 1.042vw;
+    font-size: 1.1em; /* Base font size for content */
+    line-height: 1.8; /* Line spacing for content */
+    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+    padding-bottom: 2vh;
+}
+
+/* Content links styles */
+.content a {
+    color: orange; /* Change this to your desired color */
+    text-decoration: none; /* Remove underline */
+    line-height: 1.5; /* More space for paragraph text */
+    transition: color 0.3s ease; /* Smooth transition for link color */
+}
+
+.content a:hover {
+    color: blueviolet; /* Change this to your desired hover color */
+    background-color: #575757; /* Optional: change background color on hover */
+}
+
+/* --------------------------------- */
+/* What's New: Styles              */
+/* --------------------------------- */
+
+.newbox {
+    position: relative;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+    flex-direction: column;
+    height: 24vh;
+    text-align: center;
+    border: 1px groove #FFF;
+    background-color: #000;
+}
+
+.newbox a {
+    display: block;
+}
+
+.newboxcontent {
+    flex-direction: row;
+    display: flex;
+    height: 80%;
+    width: 90%;
+    margin-left: 1.5vw;
+    margin-right: 0vw;
+}
+
+.newboxinfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5vw;
+    text-align: left;   
+    background-color: black;
+    margin-top: 0%;
+}
+
+h3, .newboxinfo {
+    margin-top: 0em;
+}
+
+.bandcamp-buttonsmall {
+    background-color: #629aa9;
+    color: white; /* White text */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    vertical-align: middle;
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    width: 10vw;
+    height: 3vh;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    border: 1px groove #FFF;
+    border-radius: 15px;
+    margin-right: 1vw;
+}
+
+.bandcamp-buttonsmall:hover {
+    background-color: #48717c; 
+}
+
+.yt-buttonsmall {
+    background-color: #FF0000;
+    color: white; /* White text */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    vertical-align: middle;
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    width: 10vw;
+    height: 3vh;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    border: 1px groove #FFF;
+    border-radius: 15px;
+    margin-right: 1vw;
+}
+
+.yt-buttonsmall:hover {
+    background-color: #cb0101; 
+}
+
+.newboximgc {
+    position: relative;
+    height: 100%;
+    width: auto;
+    border: 1px groove #FFF;
+    justify-self: center;
+    align-self: center;
+}
+
+.nbimglk {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.newboximg {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.newboxbuttoncontainer {
+    display: flex;
+    flex-direction: row;
+}
+
+/* --------------------------------- */
+/* Releases Page Styles              */
+/* --------------------------------- */
+
+/* Add these styles to your CSS file */
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto; /* Centering */
+    display: block;
+    width: 80%; /* Responsive width */
+    max-width: 36.458vw; /* Maximum width */
+    position: absolute; /* Allow positioning */
+    top: 50%; /* Move to the middle */
+    left: 50%; /* Move to the middle */
+    transform: translate(-50%, -50%); /* Center it */
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px; /* Can adjust as needed */
+    position: absolute; /* Allow positioning */
+    top: 90%; /* Move to the middle */
+    left: 50%; /* Move to the middle */
+    transform: translate(-50%, 0%); /* Center it */
+}
+
+.close {
+    position: absolute;
+    top: 1.389vh;
+    right: 1.823vw;
+    color: white;
+    font-size: 2.083vw;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.releases-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Centers the grid within the body */
+    gap: 1vw;
+    padding: 1vw;
+    padding-right: 1vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+    width: 80%;
+}
+
+
+.release {
+    width: 14.6%;
+    min-width: 200px;
+    text-align: center;
+}
+
+.promo-release {
+    width: 14.6%;
+    min-width: 200px;
+    text-align: center;
+}
+
+.release a {
+    text-decoration: none;
+    color: white;
+}
+
+.album-art {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.release-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    color: orange; /* Title color */
+}
+
+.artist-name {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    color: cyan; /* Title color */
+}
+
+.release-artist {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    color: white; /* Title color */
+}
+
+.cat-num {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    color: white;
+}
+
+.release-date {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    color: white;
+}
+
+.promo-artist {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    font-weight: bold; /* Make the text bold */
+    color: white;
+}
+
+.promo-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+    text-decoration: underline; /* Underline the text */
+    font-weight: bold; /* Make the text bold */
+    color: yellow;
+}
+
+.promo-cat {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    font-size: 0.8em;
+}
+
+.releases-grid .promo-link {
+    color: blue; /* Color of the text */
+    text-decoration: underline; /* Underline the text */
+    font-weight: bold; /* Make the text bold */
+}
+
+.details-container {
+    display: flex; /* Align carousel and text in a row */
+    align-items: flex-start; /* Align to the start */
+    flex-direction: row;
+    justify-content: space-between; /* Keeps text on left, carousel on the right */
+}
+
+.release-info {
+    margin-right: 1.042vw; /* Space between the text and carousel */
+    align-items: flex-start;
+    width: 50%;
+    line-height: 1.5;
+    max-width: 20.833vw;
+    word-wrap: break-word; /* Allow long words to break onto the next line */
+    overflow-wrap: break-word; /* Same as word-wrap, but is more widely supported */
+    white-space: normal; /* Allows text to wrap */
+}
+
+.release-info a {
+    color: orange;
+}
+
+.release-info a:hover {
+    color: blueviolet;
+    transition: color 0.3s ease;
+}
+
+.release-details .back-link{
+    background-color: transparent;
+}
+
+.carousel {
+    position: relative;
+
+    width: auto; /* Adjust this based on your carousel's width requirements */
+    height: auto; /* Adjust this based on your carousel's height requirements */
+}
+
+/* Specific styles for the album art image */
+.carousel img.album-art-large {
+    margin-left: 1.042vw; /* Add some space between the image and text */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 350px; /* Limit the maximum width of the image */
+    border:#FFF;
+    border-width: 20px;
+    border: 1px solid white; /* Adjust the width and color of the border as needed */
+}
+
+.arrow-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center the arrows */
+    margin-top: 10px; /* Space above arrows */
+    margin-left: 20px;
+}
+
+.arrow {
+    font-size: 2rem; /* Adjust arrow size */
+    color: white; /* Arrow color */
+    background-color: clear;
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    padding: 10px; /* Padding around arrows */
+    margin: 10px 50px; /* Space between arrows */
+}
+
+.image-counter {
+    font-size: 16px;
+    color: #fff; /* Adjust this based on your design */
+    margin: 0 0.521vw; /* Add space between arrows */
+    margin-top: 32px; /* Space above arrows */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker on hover */
+}
+
+.release-details {
+    background-color: rgba(0, 0, 0, 0.9); /* Background color for contrast */
+    color: white; /* Text color for readability */
+    padding: 20px; /* Padding around the content */
+    max-width: 800px; /* Maximum width to control layout */
+    width: 100%; /* Full width for smaller screens */
+    margin: 20px auto; /* Center horizontally with margin auto */
+    text-align: left; /* Align text to the left for readability */
+    position: relative; /* Position relative to other elements */
+}
+
+/* List styles for tracklist */
+.release-details ul {
+    padding-left: 1.042vw; /* Indentation for the tracklist */
+    list-style-type: numbers;
+}
+
+.tracklist {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.track-item {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space between items */
+    padding: 5px 0; /* Add some padding */
+}
+
+.timestamp {
+    margin-left: auto; /* Push the timestamp to the right */
+    text-align: right; /* Right-align the text */
+}
+
+.sort-container {
+    margin-bottom: 20px;
+    text-align: left; /* Aligns the sort dropdown to the right */
+    padding-left: 15vw;
+}
+
+#sort-by {
+    padding: 5px;
+    font-size: 16px;
+}
+
+
+/* --------------------------------- */
+/* Button Styles                     */
+/* --------------------------------- */
+
+/* Style for the redirect button */
+.redirect-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: black;
+    color: orange;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-color: white;
+}
+
+.redirect-button:hover {
+    background-color: #575757;
+    color: blueviolet;
+    border-color: black;
+}
+
+.purchase-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+.purchase-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.download-button {
+    background-color: rgb(135, 206, 235); /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: rgb(108, 165, 187); /* Darker green on hover */
+}
+
+.discogs-button {
+    background-color: rgb(0, 0, 0); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+.discogs-button:hover {
+    background-color: rgb(73, 73, 73); /* Darker green on hover */
+}
+
+.youtube-button {
+    background-color: rgb(178, 7, 29); /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 10px; /* Space above the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+.youtube-button:hover {
+    background-color: rgb(172, 70, 70); /* Darker green on hover */
+}
+
+/* --------------------------------- */
+/* Image Styles                      */
+/* --------------------------------- */
+.left-image-container {
+    text-align: left; /* Align images to the left */
+}
+
+.left-image,
+.right-image {
+    display: inline-block; /* Allow images to be on the same line */
+    vertical-align: top; /* Aligns them at the top */
+}
+
+.left-image img,
+.right-image img {
+    height: 46.296vh; /* Set a specific height for images */
+    width: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Make the images responsive */
+}
+
+/* --------------------------------- */
+/* Reference Styles                  */
+/* --------------------------------- */
+.reference {
+    color: lightgray; /* Reference text color */
+    font-size: 0.7em; /* Smaller font size for references */
+    line-height: 1; /* Line height for reference text */
+}
+
+.reference a {
+    color: lightslategray; /* Color for reference links */
+    transition: color 0.3s ease;
+}
+
+/* --------------------------------- */
+/* Footer Styles                     */
+/* --------------------------------- */
+footer {
+    background-color: #000; /* Background color of the footer */
+    color: darkgray; /* Text color */
+    text-align: center; /* Align text to the left */
+    position: relative; /* Position in relation to other elements */
+    width: calc(100% - 11.458vw); /* Ensure it stretches across the entire width */
+    bottom: 0; /* Stick it to the bottom if necessary */
+    font-size: 0.75em; /* Smaller font size for footer */
+    line-height: 0.66em; /* Line height for footer text */
+    transition: margin-left 0.3s ease; /* Smooth transition for footer margin */
+    width: calc(100% - 1.042vw);
+    background-color: black;
+    margin-top: 3vw;
+}
+
+footer a {
+    color: darkslategray; /* Links inside footer */
+    text-decoration: none; /* Remove underline */
+    line-height: 0.66em; /* Line height for footer links */
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: blueviolet; /* Change this to your desired hover color */
+    background-color: #575757; /* Optional: change background color on hover */
+}
+
+
+
+
+
+@media only screen and (max-width: 1023px) {
+    .content {
+        margin-left: 6vw; 
+        margin-right: 6vw;
+        padding: 1.042vw;
+        font-size: 1.1em; /* Base font size for content */
+        line-height: 1.8; /* Line spacing for content */
+        transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+        padding-bottom: 2vh;
+    }
+
+    .release {
+        width: 12.5%;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    .promo-release {
+        width: 12.5%;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    .releases-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centers the grid within the body */
+        gap: 1vw;
+        padding: 1vw;
+        padding-right: 1vw;
+        margin-left: 7vw;
+        margin-right: 7vw;
+        transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+        width: 80%;
+    }
+    .release-title {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: orange; /* Title color */
+    }
+    
+    .artist-name {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: cyan; /* Title color */
+    }
+    
+    .release-artist {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: white; /* Title color */
+    }
+    
+    .cat-num {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: white;
+    }
+
+    .release-date {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: white;
+    }
+    
+    .promo-artist {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        font-weight: bold; /* Make the text bold */
+        color: white;
+    }
+    
+    .promo-title {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        text-decoration: underline; /* Underline the text */
+        font-weight: bold; /* Make the text bold */
+        color: yellow;
+    }
+    
+    .promo-cat {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+    }
+    .nav-menu {
+        display: none;
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 0; /* Align to the top of the viewport */
+        height: 100%; /* Set the height to full viewport height */
+        display: flex; /* Enable flexbox layout */
+        flex-direction: column; /* Align children in a column */
+        align-items: center; /* Center items horizontally */
+        width: 100vw; /* Fixed width */
+        background-color: #000; /* Sidebar background color */
+        padding-top: 1.852vh; /* Space above the content */
+        transition: width 0.3s ease-in-out; /* Add transition for width */
+        z-index: 10; /* Ensure the sidebar is above other content */
+    }
+    
+    .sidebar.collapsed {
+        width: 0; /* Collapsed width */
+        overflow: hidden; /* Hide any overflow content */
+    }
+    
+    .menu-icon {
+        width: 2rem; /* Set a size for the icon */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+        min-width: 30px;
+    }
+    
+    #toggle-sidebar {
+        display: block; /* Make it a block element */
+        background-color: transparent; /* Make background transparent */
+        border: none; /* Remove the border */
+        cursor: pointer; /* Pointer cursor on hover */
+        padding: 0; /* Remove padding */
+        margin-bottom: 2.222rem; /* Space below the button */
+        transition: top 0.3s ease; /* Smooth transition for the top position */
+    }
+    
+    #open-sidebar {
+        position: fixed; /* Position it fixed */
+        border: none; /* Remove the border */
+        background-color: transparent; /* Make background transparent */
+        top: 0.625rem; /* Distance from the top */
+        left: 0.625rem; /* Distance from the left */
+        opacity: 0; /* Start invisible */
+        transition: opacity 0.2s ease; /* Smooth transition for opacity */
+        z-index: 5;
+        cursor: pointer;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* When the sidebar is collapsed, set the opacity to 0.5 */
+    .sidebar.collapsed #open-sidebar {
+        opacity: 0.5; /* Half-opacity when sidebar is collapsed */
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    /* Fully visible on hover */
+    #open-sidebar:hover {
+        opacity: 1 !important;  /* Fully visible on hover */
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .sidebar.collapsed #open-sidebar:hover {
+        opacity: 1 !important;  /* Fully visible on hover */
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .sidebar-logo {
+        max-width: 4rem; /* Makes the logo responsive */
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Removes any extra space below the image */
+        margin: 0 auto; /* Centers the image horizontally in the sidebar */
+    }
+    
+    .sidebar ul {
+        list-style-type: none; /* Remove bullets from list */
+        padding: 0.2rem; /* Padding for the sidebar content */
+        font-size: 1.65em;
+    }
+    
+    .sidebar ul li {
+        padding: 0.2rem; /* Space around list items */
+        text-align: center; /* Center text in list items */
+    }
+    
+    .sidebar ul li a {
+        display: block; /* Make the links block elements */
+        color: white; /* Link color */
+        text-decoration: none; /* Remove underline */
+        padding: 0.625rem; /* Space inside links */
+        transition: background-color 0.3s ease; /* Smooth transition for links */
+    }
+    
+    .sidebar ul li a:hover {
+        background-color: #575757; /* Background color on hover */
+    }
+    .details-container {
+        display: flex; /* Align carousel and text in a row */
+        align-items: flex-start; /* Align to the start */
+        flex-direction: column;
+        justify-content: center;/* Keeps text on left, carousel on the right */
+        width: 100%;
+        align-items: center;
+    }
+    
+    .release-info {
+        align-items: flex-start;
+        width: 100%;
+        line-height: 1.5;
+        max-width: 80vw;
+        word-wrap: break-word; /* Allow long words to break onto the next line */
+        overflow-wrap: break-word; /* Same as word-wrap, but is more widely supported */
+        white-space: normal; /* Allows text to wrap */
+    }
+    
+    .release-info a {
+        color: orange;
+    }
+    
+    .release-info a:hover {
+        color: blueviolet;
+        transition: color 0.3s ease;
+    }
+    
+    .release-details .back-link{
+        background-color: transparent;
+    }
+    
+    .carousel {
+        position: relative;
+        align-items: center;
+        width: auto; /* Adjust this based on your carousel's width requirements */
+        height: auto; /* Adjust this based on your carousel's height requirements */
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    /* Specific styles for the album art image */
+    .carousel img.album-art-large {
+        height: auto; /* Maintain aspect ratio */
+        max-width: 60vw; /* Limit the maximum width of the image */
+        border:#FFF;
+        border-width: 20px;
+        border: 1px solid white; /* Adjust the width and color of the border as needed */
+    }
+    
+    .arrow-container {
+        display: flex;
+        justify-content: center; /* Center the arrows */
+        margin-top: 10px; /* Space above arrows */
+        margin-left: 0px;
+    }
+    
+    .arrow {
+        font-size: 2rem; /* Adjust arrow size */
+        color: white; /* Arrow color */
+        background-color: clear;
+        border: none; /* No border */
+        cursor: pointer; /* Pointer cursor */
+        padding: 10px; /* Padding around arrows */
+        margin: 10px 50px; /* Space between arrows */
+    }
+    
+    .image-counter {
+        font-size: 1em;
+        color: #fff; /* Adjust this based on your design */
+        margin: 0 0.48vw; /* Add space between arrows */
+        margin-top: 32px; /* Space above arrows */
+    }
+
+    .release-details {
+        background-color: rgba(0, 0, 0, 0.9); /* Background color for contrast */
+        color: white; /* Text color for readability */
+        max-width: 800px; /* Maximum width to control layout */
+        width: auto; /* Full width for smaller screens */
+        text-align: left; /* Align text to the left for readability */
+        position: relative; /* Position relative to other elements */
+    }
+
+    .close {
+        position: absolute;
+        top: 2vh;
+        right: 4vw;
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    }
+    
+    .modal-content {
+        margin: auto; /* Centering */
+        display: block;
+        width: 100vh; /* Responsive width */
+        min-width: 40vh;
+        position: absolute; /* Allow positioning */
+        top: 50%; /* Move to the middle */
+        left: 50%; /* Move to the middle */
+        transform: translate(-50%, -50%); /* Center it */
+    }
+
+    .sort-container {
+        margin-bottom: 20px;
+        text-align: center; /* Aligns the sort dropdown to the right */
+        padding-left: 0vw;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+ {
+    .content {
+        margin-left: 6vw; 
+        margin-right: 6vw;
+        padding: 1.042vw;
+        font-size: 1.1em; /* Base font size for content */
+        line-height: 1.8; /* Line spacing for content */
+        transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+        padding-bottom: 2vh;
+    }
+
+    .release {
+        width: 12.5%;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    .promo-release {
+        width: 12.5%;
+        min-width: 300px;
+        text-align: center;
+    }
+
+    .releases-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center; /* Centers the grid within the body */
+        gap: 1vw;
+        padding: 1vw;
+        padding-right: 1vw;
+        margin-left: 7vw;
+        margin-right: 7vw;
+        transition: margin-left 0.3s ease; /* Smooth transition for content margin */
+        width: 80%;
+    }
+    .release-title {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: orange; /* Title color */
+    }
+    
+    .artist-name {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: cyan; /* Title color */
+    }
+    
+    .release-artist {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: white; /* Title color */
+    }
+    
+    .cat-num {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: white;
+    }
+
+    .release-date {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        color: white;
+    }
+    
+    .promo-artist {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        font-weight: bold; /* Make the text bold */
+        color: white;
+    }
+    
+    .promo-title {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+        text-decoration: underline; /* Underline the text */
+        font-weight: bold; /* Make the text bold */
+        color: yellow;
+    }
+    
+    .promo-cat {
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 1em;
+    }
+    .nav-menu {
+        display: none;
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 0; /* Align to the top of the viewport */
+        height: 100%; /* Set the height to full viewport height */
+        display: flex; /* Enable flexbox layout */
+        flex-direction: column; /* Align children in a column */
+        align-items: center; /* Center items horizontally */
+        width: 100vw; /* Fixed width */
+        background-color: #000; /* Sidebar background color */
+        padding-top: 1.852vh; /* Space above the content */
+        transition: width 0.3s ease-in-out; /* Add transition for width */
+        z-index: 10; /* Ensure the sidebar is above other content */
+    }
+    
+    .sidebar.collapsed {
+        width: 0; /* Collapsed width */
+        overflow: hidden; /* Hide any overflow content */
+    }
+    
+    .menu-icon {
+        width: 2rem; /* Set a size for the icon */
+        height: auto; /* Maintain aspect ratio */
+        display: block;
+        min-width: 30px;
+    }
+    
+    #toggle-sidebar {
+        display: block; /* Make it a block element */
+        background-color: transparent; /* Make background transparent */
+        border: none; /* Remove the border */
+        cursor: pointer; /* Pointer cursor on hover */
+        padding: 0; /* Remove padding */
+        margin-bottom: 2.222rem; /* Space below the button */
+        transition: top 0.3s ease; /* Smooth transition for the top position */
+    }
+    
+    #open-sidebar {
+        position: fixed; /* Position it fixed */
+        border: none; /* Remove the border */
+        background-color: transparent; /* Make background transparent */
+        top: 0.625rem; /* Distance from the top */
+        left: 0.625rem; /* Distance from the left */
+        opacity: 0; /* Start invisible */
+        transition: opacity 0.2s ease; /* Smooth transition for opacity */
+        z-index: 5;
+        cursor: pointer;
+        display: block;
+        visibility: visible;
+    }
+    
+    /* When the sidebar is collapsed, set the opacity to 0.5 */
+    .sidebar.collapsed #open-sidebar {
+        opacity: 0.5; /* Half-opacity when sidebar is collapsed */
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    /* Fully visible on hover */
+    #open-sidebar:hover {
+        opacity: 1 !important;  /* Fully visible on hover */
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .sidebar.collapsed #open-sidebar:hover {
+        opacity: 1 !important;  /* Fully visible on hover */
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    .sidebar-logo {
+        max-width: 4rem; /* Makes the logo responsive */
+        height: auto; /* Maintains the aspect ratio */
+        display: block; /* Removes any extra space below the image */
+        margin: 0 auto; /* Centers the image horizontally in the sidebar */
+    }
+    
+    .sidebar ul {
+        list-style-type: none; /* Remove bullets from list */
+        padding: 0.2rem; /* Padding for the sidebar content */
+        font-size: 1.65em;
+    }
+    
+    .sidebar ul li {
+        padding: 0.2rem; /* Space around list items */
+        text-align: center; /* Center text in list items */
+    }
+    
+    .sidebar ul li a {
+        display: block; /* Make the links block elements */
+        color: white; /* Link color */
+        text-decoration: none; /* Remove underline */
+        padding: 0.625rem; /* Space inside links */
+        transition: background-color 0.3s ease; /* Smooth transition for links */
+    }
+    
+    .sidebar ul li a:hover {
+        background-color: #575757; /* Background color on hover */
+    }
+
+    .details-container {
+        display: flex; /* Align carousel and text in a row */
+        align-items: flex-start; /* Align to the start */
+        flex-direction: column;
+        justify-content: center;/* Keeps text on left, carousel on the right */
+        width: 100%;
+        align-items: center;
+    }
+    
+    .release-info {
+        align-items: flex-start;
+        width: 100%;
+        line-height: 1.5;
+        max-width: 80vw;
+        word-wrap: break-word; /* Allow long words to break onto the next line */
+        overflow-wrap: break-word; /* Same as word-wrap, but is more widely supported */
+        white-space: normal; /* Allows text to wrap */
+    }
+    
+    .release-info a {
+        color: orange;
+    }
+    
+    .release-info a:hover {
+        color: blueviolet;
+        transition: color 0.3s ease;
+    }
+    
+    .release-details .back-link{
+        background-color: transparent;
+    }
+    
+    .carousel {
+        position: relative;
+        align-items: center;
+        width: 100%; /* Adjust this based on your carousel's width requirements */
+        height: auto; /* Adjust this based on your carousel's height requirements */
+        margin-top: 2em;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    /* Specific styles for the album art image */
+    .carousel img.album-art-large {
+        height: auto; /* Maintain aspect ratio */
+        max-width: 60vw; /* Limit the maximum width of the image */
+        border:#FFF;
+        border-width: 20px;
+        border: 1px solid white; /* Adjust the width and color of the border as needed */
+    }
+    
+    .arrow-container {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: center; /* Center the arrows */
+        margin-top: 10px; /* Space above arrows */
+        margin-left: 0px;
+    }
+    
+    .arrow {
+        font-size: 2rem; /* Adjust arrow size */
+        color: white; /* Arrow color */
+        background-color: clear;
+        border: none; /* No border */
+        cursor: pointer; /* Pointer cursor */
+        margin: 10px 50px; /* Space between arrows */
+    }
+    
+    .image-counter {
+        font-size: 1em;
+        color: #fff; /* Adjust this based on your design */
+        margin: 0 0.521vw; /* Add space between arrows */
+        margin-top: 32px; /* Space above arrows */
+    }
+
+    .release-details {
+        background-color: rgba(0, 0, 0, 0.9); /* Background color for contrast */
+        color: white; /* Text color for readability */
+        max-width: 800px; /* Maximum width to control layout */
+        width: auto; /* Full width for smaller screens */
+        text-align: left; /* Align text to the left for readability */
+        position: relative; /* Position relative to other elements */
+    }
+    .close {
+        position: absolute;
+        top: 2vh;
+        right: 4vw;
+        color: white;
+        font-size: 3rem;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1000; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%;
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+    }
+    
+    .modal-content {
+        margin: auto; /* Centering */
+        display: block;
+        width: 100vh; /* Responsive width */
+        min-width: 40vh;
+        position: absolute; /* Allow positioning */
+        top: 50%; /* Move to the middle */
+        left: 50%; /* Move to the middle */
+        transform: translate(-50%, -50%); /* Center it */
+    }
+
+    .sort-container {
+        margin-bottom: 20px;
+        text-align: center; /* Aligns the sort dropdown to the right */
+        padding-left: 0vw;
+        font-size: 2rem;
+    }
+}
