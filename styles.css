@@ -12,6 +12,7 @@ html, body {
 body {
     font-size: 1.7vh;
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif; 
     background-color: black; /* Set background color to black */
     color: white; /* Change text color to white for better contrast */
@@ -21,13 +22,11 @@ body {
 
 h2, h3, h4, h5, h6 {
     margin-bottom: 0.2em; /* Adjust the space below headings */
-    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
 }
 
 h1 {
     margin-bottom: 0.2em; /* Adjust the space below headings */
     text-align: center;
-    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
 }
 
 /* Navigation Menu Styles */
@@ -52,7 +51,6 @@ h1 {
     text-decoration: none; /* Remove underline */
     font-weight: bold;
     font-family: 'Roboto', sans-serif;
-    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
 }
 
 .nav-menu li a:hover {
@@ -156,7 +154,6 @@ header {
     padding: 1.042vw;
     font-size: 1.1em; /* Base font size for content */
     line-height: 1.8; /* Line spacing for content */
-    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
     padding-bottom: 2vh;
 }
 
@@ -185,7 +182,7 @@ header {
     flex-direction: column;
     height: 24vh;
     text-align: center;
-    border: 1px groove #FFF;
+    border: 1px groove #3b3b3b;
     background-color: #000;
 }
 
@@ -296,6 +293,7 @@ h3, .newboxinfo {
 .newboxbuttoncontainer {
     display: flex;
     flex-direction: row;
+    margin-top: 5%;
 }
 
 /* --------------------------------- */
@@ -360,7 +358,6 @@ h3, .newboxinfo {
     padding-right: 1vw;
     margin-left: 15vw;
     margin-right: 15vw;
-    transition: margin-left 0.3s ease; /* Smooth transition for content margin */
     width: 80%;
 }
 
@@ -385,7 +382,7 @@ h3, .newboxinfo {
 .album-art {
     width: 100%;
     height: auto;
-    transition: transform 0.3s ease;
+    border: 1px groove #3b3b3b;
 }
 
 .release-title {
@@ -668,6 +665,25 @@ h3, .newboxinfo {
     background-color: rgb(172, 70, 70); /* Darker green on hover */
 }
 
+.purchase-button-blue {
+    background-color: #629aa9; /* Green background */
+    color: white; /* White text */
+    border: none; /* No border */
+    padding: 10px 20px; /* Some padding */
+    text-align: center; /* Centered text */
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+}
+
+.purchase-button-blue:hover {
+    background-color: #48717c; /* Darker green on hover */
+}
+
 /* --------------------------------- */
 /* Image Styles                      */
 /* --------------------------------- */
@@ -714,7 +730,6 @@ footer {
     bottom: 0; /* Stick it to the bottom if necessary */
     font-size: 0.75em; /* Smaller font size for footer */
     line-height: 0.66em; /* Line height for footer text */
-    transition: margin-left 0.3s ease; /* Smooth transition for footer margin */
     width: calc(100% - 1.042vw);
     background-color: black;
     margin-top: 3vw;
@@ -1055,6 +1070,133 @@ footer a:hover {
         padding-left: 0vw;
         font-size: 1.2rem;
     }
+
+    .newboxtitle {
+        margin: auto;
+    }
+/* --------------------------------- */
+/* What's New: Styles              */
+/* --------------------------------- */
+
+.newbox {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 50vh;
+    text-align: center;
+    border: 1px groove #3b3b3b;
+}
+
+.newbox a {
+    display: block;
+}
+
+.newboxcontent {
+    flex-direction: column;
+    display: flex;
+    height: 80%;
+    width: 90%;
+    margin: auto;
+    justify-self: center;
+    justify-content: center;
+}
+
+.newboxinfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: 100%;
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+
+h3, .newboxinfo {
+    margin-top: 0em;
+    padding: 0%;
+    text-align: center;
+}
+
+.bandcamp-buttonsmall {
+    background-color: #629aa9;
+    color: white; /* White text */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    vertical-align: middle;
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    width: 50%;
+    height: 5vh;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    border: 1px groove #FFF;
+    border-radius: 15px;
+    margin-right: 1vw;
+}
+
+.bandcamp-buttonsmall:hover {
+    background-color: #48717c; 
+}
+
+.yt-buttonsmall {
+    background-color: #FF0000;
+    color: white; /* White text */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    vertical-align: middle;
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    width: 50%;
+    height: 5vh;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    border: 1px groove #FFF;
+    border-radius: 15px;
+    margin-right: 1vw;
+}
+
+.yt-buttonsmall:hover {
+    background-color: #cb0101; 
+}
+
+.newboximgc {
+    height: 45%;
+    width: auto;
+    background-color: lightblue;
+    width: 40vw;
+}
+
+.nbimglk {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.newboximg {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.newboxbuttoncontainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    width: 100%;
+}
 }
 
 @media only screen 
@@ -1379,4 +1521,131 @@ footer a:hover {
         padding-left: 0vw;
         font-size: 2rem;
     }
+
+/* --------------------------------- */
+/* What's New: Styles              */
+/* --------------------------------- */
+
+.newbox {
+    position: relative;
+    display: flex;
+    align-items: flex-start ;
+    justify-content: center;
+    flex-direction: column;
+    height: 24vh;
+    text-align: center;
+    border: 1px groove #3b3b3b;
+    background-color: #000;
+}
+
+.newbox a {
+    display: block;
+}
+
+.newboxcontent {
+    flex-direction: row;
+    display: flex;
+    height: 80%;
+    width: 90%;
+    margin-left: 1.5vw;
+    margin-right: 0vw;
+}
+
+.newboxinfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-left: 5vw;
+    text-align: left;
+    background-color: black;
+    margin-top: 0%;
+}
+
+h3, .newboxinfo {
+    margin-top: 0em;
+}
+
+.bandcamp-buttonsmall {
+    background-color: #629aa9;
+    color: white; /* White text */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    vertical-align: middle;
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    width: 10vw;
+    height: 3vh;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    border: 1px groove #FFF;
+    border-radius: 15px;
+    margin-right: 1vw;
+}
+
+.bandcamp-buttonsmall:hover {
+    background-color: #48717c; 
+}
+
+.yt-buttonsmall {
+    background-color: #FF0000;
+    color: white; /* White text */
+    border: none; /* No border */
+    text-align: center; /* Centered text */
+    vertical-align: middle;
+    text-decoration: none; /* No underline */
+    display: inline-block; /* Inline-block for positioning */
+    font-size: 16px; /* Font size */
+    margin-top: 0px; /* Space above the button */
+    margin-bottom: 5px;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease;
+    width: 10vw;
+    height: 3vh;
+    font-size: 0.8rem;
+    vertical-align: middle;
+    border: 1px groove #FFF;
+    border-radius: 15px;
+    margin-right: 1vw;
+}
+
+.yt-buttonsmall:hover {
+    background-color: #cb0101; 
+}
+
+.newboximgc {
+    position: relative;
+    height: 100%;
+    width: auto;
+    border: 1px groove #FFF;
+    justify-self: center;
+    align-self: center;
+}
+
+.nbimglk {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.newboximg {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.newboxbuttoncontainer {
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+}
 }
