@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create open-sidebar button dynamically
     const openButton = document.createElement("button");
     openButton.id = "open-sidebar";
-    openButton.innerHTML = '<img src="../menu-icon.png" alt="Open Sidebar" class="menu-icon">'; // Ensure the path is correct
+    openButton.innerHTML = '<img src="menu-icon.png" alt="Open Sidebar" class="menu-icon">'; // Ensure the path is correct
     openButton.style.display = "block"; // Show the open button initially
     openButton.style.opacity = "0.5"; // Set opacity to indicate it's inactive
     document.body.appendChild(openButton); // Append the button to the body
